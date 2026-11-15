@@ -1,11 +1,15 @@
 import asyncio
 import json
 import os
+from contextlib import asynccontextmanager
 
 import httpx
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
+
+load_dotenv()
 
 import tts
 
